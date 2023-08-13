@@ -1,0 +1,36 @@
+<div class="col-md-6  offset-md-3">
+    <h3> Create Task </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class = "form-control" id="title"
+            [(ngModel)] = "task.title" name = "title">
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class = "form-control" id="description"
+            [(ngModel)] = "task.description" name = "description">
+        </div>
+
+        <div class="form-group">
+            <label>Due Date</label>
+            <input type="date" class = "form-control" id="due_date"
+            [(ngModel)] = "task.due_date" name = "due_date">
+        </div>
+
+        <div class="form-group">
+            <label>Type</label>
+            <select class = "form-select" id="type"
+            [(ngModel)] = "task.type" name = "type">
+                <option value="zrobione">Zrobione</option>
+                <option value="w trakcie">W trakcie</option>
+                <option value="zrobic">Zrobić</option>
+
+            </select>
+        </div>
+
+        <br><button class = "btn btn-success" type = "submit">Submit</button>
+    </form>
+</div>

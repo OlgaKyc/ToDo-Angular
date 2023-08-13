@@ -1,0 +1,25 @@
+<h2>Tasks List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let task of tasks">
+            <td> {{ task.title }} </td>
+            <td> {{ task.description }} </td>
+            <td> {{ task.due_date | date:'yyyy-MM-dd'}} </td>
+            <td> {{ task.type }} </td>
+            <td>
+                <button (click) = "updateTask(task.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteTask(task.id)" class = "btn btn-danger" style="margin-left: 15px"> Delete</button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
